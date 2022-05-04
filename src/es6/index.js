@@ -147,6 +147,57 @@ const helloPromise = () => {
 }
 
 helloPromise() //Ejecuta promesa
-    .then(response => console.log(response)) //Then permite obtener la respuesta (puede haber mas de uno)
-    .then(() => console.log('hola'))
-    .catch(error => console.log(error)); //Catch muestra el error en caso de que no se pueda cumplir la promesa
+.then(response => console.log(response)) //Then permite obtener la respuesta (puede haber mas de uno)
+.then(() => console.log('hola'))
+.catch(error => console.log(error)); //Catch muestra el error en caso de que no se pueda cumplir la promesa
+
+
+
+
+
+
+
+//Clase 5
+//Clases
+class calculator{
+    constructor(){//constructor es el metodo para inicializar la clase
+        this.valueA = 0;//asignar las variables que vana  estar en un scope global
+        this.valueB =0;
+    }
+    sum(valueA, valueB){
+        this.valueA = valueA; //Lo igualamos al valor que estamos recibiendo
+        this.valueB = valueB;
+        return this.valueA + this.valueB; //Regresa la suma
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,2));
+
+
+//Modulos (Import y export)
+
+// import { hello } from './module.js';  //Asi lo hizo el profe y no funciono
+// hello();
+
+//importacion con nodejs
+const hola = require('./module');
+console.log(hola());
+
+
+//Generadores, suele usarse en fibonacci
+//Los generadores son una Funcion especial que retorna una serie de valores segun el algoritmo definido
+
+function* helloWorld(){
+    if(true){
+        yield 'Hello, '; //yield permite retornar algo y guarda el estado de forma interna
+    }
+    if (true){
+        yield 'World'; //Segundo elemento que va a ser ejecutado cuando sea ejecutado el otro valor
+    }
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value); //Con next va a mostrar el siguiente valor
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
