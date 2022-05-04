@@ -96,3 +96,57 @@ console.log(globalVar);
 const a='b';
 a = 'a';
 console.log(a);
+
+
+
+//CLASE 4
+
+//antes de ES 6
+let name = 'oscar';
+let age = 32;
+
+obj = { name: name, age: age};
+//Con ES6
+obj2 = {name, age};
+console.log(obj2);
+
+
+//Arrow functions
+
+const names = [
+    {name: 'Oscar', age: 32},
+    {name: 'Yesica', age: 27}
+]
+let listOfNames = names.map(function (item){  //recibe una funcion anonima
+    console.log(item.name);
+})
+
+//Con ES6
+let listOfNames2 = names.map(item => console.log(item.name));  // con => establecemos que va a ser una funcion anonima que va a retornar el console
+
+const listOfNames3 = (name, age, country) => {
+    ...
+}
+
+const listOfNames4 = name => { //cuando solo voy a usar un elemento
+    ...
+} 
+
+const square = num => num * num;
+
+
+//Asincronismo, Promesas, algo va a pasar, en algun momento va a suceder algo que establecemos
+const helloPromise = () => {
+    return new Promise((resolve, reject) => { //resolve es promesa resuelta, reject es promesa rechazada
+        if(false){ //intercambiar con true para ver resultados
+            resolve('Hey!, todo bien');
+        } else{
+            reject('Ups!!');
+        }
+    });
+}
+
+helloPromise() //Ejecuta promesa
+    .then(response => console.log(response)) //Then permite obtener la respuesta (puede haber mas de uno)
+    .then(() => console.log('hola'))
+    .catch(error => console.log(error)); //Catch muestra el error en caso de que no se pueda cumplir la promesa
