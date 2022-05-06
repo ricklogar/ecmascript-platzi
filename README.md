@@ -1,5 +1,6 @@
 # ECMAScript 6+
-###ECMAScript 6
+
+<h3>ECMAScript 6</h3>
 * Default params
 * Concatenación
 * Let y CONST
@@ -13,11 +14,11 @@
 * Módulos
 * Generadores
 -----
-###ECMAScript 7
+<h3>ECMAScript 7</h3>
 * Array.includes
 *  Exponentiation operator (**)
 -----
-###ECMAScript 8
+<h3>ECMAScript 8</h3>
 * Object.entries( )
 * Object.values( )
 * padStart( )
@@ -25,13 +26,13 @@
 * Trailing commas
 * Async Await
 -----
-###ECMAScript 9
+<h3>ECMAScript 9</h3>
 * ...all
 * Propiedades de propagacion
 * Promise.finally()
 * Regex
 -----
-###ECMAScript 10
+<h3>ECMAScript 10</h3>
 * Method flat
 * flatMap
 * trimStart
@@ -40,7 +41,7 @@
 * fromEntries
 * symbol object
 -----
-###ECMAScript 2020
+<h3>ECMAScript 2020</h3>
 * Dynamic import
 * BigInt
 * Promise.allSettled
@@ -48,7 +49,7 @@
 * Null operator (??)
 * Optional chaining
 -----
-###ECMAScript 2021
+<h3>ECMAScript 2021</h3>
 * .replaceAll( )
 * Private methods
 * Promise.any
